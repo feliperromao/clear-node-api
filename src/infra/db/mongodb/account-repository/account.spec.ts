@@ -10,6 +10,12 @@ describe('Account Mongo Repository', () => {
     await MongoHelper.connect(process.env.MONGO_URL)
   })
 
+  // ? Este etapa do teste tem como objetivo limpar a tabela(collection) do banco de dados entre cada teste
+  beforeEach(async () => {
+    const accountsCollection = await MongoHelper.getCollection('accounts')
+    await accountsCollection.deleteMany({})
+  })
+
   afterAll(async () => {
     await MongoHelper.disconnect()
   })
