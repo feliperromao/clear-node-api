@@ -22,7 +22,10 @@ module.exports = {
   // A list of paths to directories that Jest should use to search for files in
   roots: [
     '<rootDir>/src'
-  ]
+  ],
+
+  // A preset that is used as a base for Jest's configuration
+  preset: '@shelf/jest-mongodb'
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -102,9 +105,6 @@ module.exports = {
 
   // An enum that specifies notification mode. Requires { notify: true }
   // notifyMode: "failure-change",
-
-  // A preset that is used as a base for Jest's configuration
-  // preset: undefined,
 
   // Run tests from one or more projects
   // projects: undefined,
