@@ -1,0 +1,9 @@
+POST http://localhost:5050/api/signup
+content-type:  application/json
+
+{
+  "name": "Felipe Romao",
+  "email": "felipe.romao@mail.com",
+  "password": "123456",
+  "passwordConfirmation": "123456"
+}
